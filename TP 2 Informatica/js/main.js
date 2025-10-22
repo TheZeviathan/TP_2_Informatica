@@ -11,6 +11,8 @@
     }
   });
 })();
+
+// se ejecuta al enviar el formulario de busqueda al servidor
 document.addEventListener('submit', function(e){
   const form = e.target;
   if(form && form.classList && form.classList.contains('search-form')){
