@@ -1,48 +1,162 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Contacto - Artista</title>
+  <title>Contacto - NOMBRE DEL ARTISTA</title>
+
   <!-- Bootstrap CSS (CDN) -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Tipografías -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Roboto+Slab:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Estilos del proyecto -->
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-  <header class="navbar-custom">
-    <div class="navbar-container">
-      <div class="brand">NOMBRE DEL ARTISTA</div>
+<body class="bg-dark text-light">
 
-      <ul class="nav-links" aria-label="Navegación principal">
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="bio.html">Biografía</a></li>
-        <li><a href="obras.html">Obras</a></li>
-        <li><a href="galeria.html">Galería</a></li>
-        <li><a href="eventos.html">Eventos</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-        <li><a href="proyecto.html">Proyecto</a></li>
-        <li><a href="subpagina1.html">Subpágina1</a></li>
-        <li><a href="subpagina2.html">Subpágina2</a></li>
-      </ul>
+  <!-- NAVBAR (usar tu navbar preferida; aquí versión compacta con Bootstrap) -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-black shadow-sm">
+    <div class="container">
+      <a class="navbar-brand text-danger d-flex align-items-center" href="index.html">
+        <img src="img/logo.png" alt="Logo" class="logo-img me-2">
+        <span>NOMBRE DEL ARTISTA</span>
+      </a>
 
-      <form class="search-box search-form" role="search">
-        <input type="search" name="q" placeholder="Buscar..." aria-label="Buscar">
-        <button type="submit" aria-label="Buscar">🔍</button>
-      </form>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navMain">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="bio.html">Biografía</a></li>
+          <li class="nav-item"><a class="nav-link" href="obras.html">Obras</a></li>
+          <li class="nav-item"><a class="nav-link" href="galeria.html">Galería</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
     </div>
-  </header>
+  </nav>
 
-  <main class="container-panel" role="main">
-    <h1>Contacto</h1>
-    <p>Contenido temporal de la sección <strong>Contacto</strong>. Reemplazar con texto e imágenes reales.</p>
+  <!-- MAIN -->
+  <main class="container py-5" role="main">
+    <div class="row g-4">
+      <!-- Left: Formulario -->
+      <section class="col-lg-7" aria-labelledby="contactoTitulo">
+        <h1 id="contactoTitulo" class="display-6 mb-3">Contacto</h1>
+        <p class="lead text-muted">Escribime para consultas, encargos o prensa. Respondo en 48-72 hs hábiles.</p>
+
+        <!-- Avisos de validación global -->
+        <div id="formAlert" class="alert d-none" role="alert" aria-live="polite"></div>
+
+        <form id="contactForm" novalidate>
+          <div class="mb-3">
+            <label for="name" class="form-label">Nombre <span class="text-danger">*</span></label>
+            <input type="text" id="name" name="name" class="form-control" required minlength="2" aria-describedby="nameHelp">
+            <div id="nameHelp" class="form-text text-muted">Tu nombre completo o el nombre con el que quieras que te respondan.</div>
+            <div class="invalid-feedback" id="nameError">Por favor ingresa tu nombre (mín. 2 caracteres).</div>
+          </div>
+
+          <div class="mb-3">
+            <label for="email" class="form-label">Correo electrónico <span class="text-danger">*</span></label>
+            <input type="email" id="email" name="email" class="form-control" required aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text text-muted">Usá un email válido para que pueda responder.</div>
+            <div class="invalid-feedback" id="emailError">Por favor ingresa un correo válido.</div>
+          </div>
+
+          <div class="mb-3">
+            <label for="subject" class="form-label">Asunto</label>
+            <input type="text" id="subject" name="subject" class="form-control" maxlength="120">
+            <div class="form-text text-muted">Ej: Consulta sobre obra / Pedido de encargo / Prensa</div>
+          </div>
+
+          <div class="mb-3">
+            <label for="message" class="form-label">Mensaje <span class="text-danger">*</span></label>
+            <textarea id="message" name="message" class="form-control" rows="6" required minlength="10" maxlength="2000" aria-describedby="messageHelp"></textarea>
+            <div id="messageHelp" class="form-text text-muted">Explicá brevemente tu consulta (mín. 10 caracteres).</div>
+            <div class="invalid-feedback" id="messageError">Por favor escribí un mensaje (mín. 10 caracteres).</div>
+          </div>
+
+          <!-- Checkbox GDPR / privacidad (opcional pero recomendable) -->
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="consent" required>
+            <label class="form-check-label" for="consent">Autorizo el uso de mis datos para responder mi consulta. <small class="text-muted">(Política de privacidad)</small></label>
+            <div class="invalid-feedback">Debes autorizar el uso de tus datos para continuar.</div>
+          </div>
+
+          <div class="d-flex gap-2">
+            <button type="submit" class="btn btn-danger" id="submitBtn">Enviar mensaje</button>
+            <button type="reset" class="btn btn-outline-light">Limpiar</button>
+          </div>
+        </form>
+      </section>
+
+      <!-- Right: Info de contacto, redes y mapa -->
+      <aside class="col-lg-5">
+        <div class="card bg-dark border-secondary mb-4">
+          <div class="card-body">
+            <h2 class="h5 card-title">Datos de contacto</h2>
+            <p class="mb-1"><strong>Email:</strong> <a href="mailto:artista@example.com">artista@example.com</a></p>
+            <p class="mb-1"><strong>Teléfono:</strong> <a href="tel:+541112345678">+54 11 1234-5678</a></p>
+            <p class="mb-0"><strong>Ubicación:</strong> Ciudad, País (ubicación aproximada)</p>
+          </div>
+        </div>
+
+        <div class="card bg-dark border-secondary mb-4">
+          <div class="card-body">
+            <h3 class="h6">Redes sociales</h3>
+            <ul class="list-unstyled d-flex gap-3">
+              <li><a class="btn btn-outline-light btn-sm" href="#" target="_blank" rel="noopener">Instagram</a></li>
+              <li><a class="btn btn-outline-light btn-sm" href="#" target="_blank" rel="noopener">YouTube</a></li>
+              <li><a class="btn btn-outline-light btn-sm" href="#" target="_blank" rel="noopener">Twitter/X</a></li>
+              <li><a class="btn btn-outline-light btn-sm" href="#" target="_blank" rel="noopener">Bandcamp</a></li>
+            </ul>
+            <p class="text-muted small mt-2">Enlaces a perfiles reales o ficticios según corresponda al TP.</p>
+          </div>
+        </div>
+
+        <div class="card bg-dark border-secondary">
+          <div class="card-body">
+            <h3 class="h6">Ubicación (mapa)</h3>
+            <!-- iframe de mapa opcional: reemplazar src por ubicación real o dejar un placeholder -->
+            <div class="ratio ratio-16x9 mb-2">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.127509081499!2d-58.39591902578092!3d-34.60093707295525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca655e223b07%3A0x991ab63bea99380b!2sUNA%20Artes%20Multimedialess!5e0!3m2!1ses!2sar!4v1762202604603!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+            <p class="text-muted small mb-0">Mapa solo como referencia. Podés eliminarlo si el artista es ficticio.</p>
+          </div>
+        </div>
+      </aside>
+    </div>
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <small>© 2025 - Sitio del Artista | Trabajo Práctico Informática General</small>
+  <!-- Modal: Confirmación / Gracias (usa Bootstrap JS) -->
+  <div class="modal fade" id="thanksModal" tabindex="-1" aria-labelledby="thanksLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content bg-dark text-light border-secondary">
+        <div class="modal-header">
+          <h5 class="modal-title" id="thanksLabel">¡Gracias!</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <p id="thanksMessage">Hemos recibido tu mensaje y te responderemos lo antes posible.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
     </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center text-secondary py-4 border-top border-secondary mt-5">
+    <small>© 2025 - Sitio del Artista | Trabajo Práctico Informática General</small>
   </footer>
 
-  <script src="js/main.js"></script>
+  <!-- Bootstrap JS (CDN) - Único framework JS usado aquí -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Script del sitio -->
+  <script src="js/contact.js"></script>
 </body>
 </html>

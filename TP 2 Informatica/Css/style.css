@@ -335,6 +335,26 @@ h5 {
 }
 
 
+/* Estilos específicos para la página de contacto */
+.logo-img { height: 44px; width: 44px; object-fit: cover; border-radius: 6px; }
+
+#contactForm .form-label { font-weight: 600; color: #f3f3f3; }
+#contactForm .form-control { background: #121212; border-color: #333; color: #eee; }
+#contactForm .form-control:focus { box-shadow: 0 0 0 0.15rem rgba(177,18,38,0.18); border-color: #b11226; }
+
+.card { background: #0d0d0d; border-color: #222; }
+.btn-danger { background-color: #b11226; border-color: #b11226; }
+.btn-danger:hover { background-color: #8f0e20; border-color: #8f0e20; }
+
+/* Accessibility - high contrast for invalid feedback */
+.invalid-feedback { color: #ffb3b3; }
+
+/* Responsive spacing */
+@media (max-width: 768px) {
+  main.container { padding-left: 1rem; padding-right: 1rem; }
+}
+
+
     body {
       background-color: #000;
       color: #eee;
