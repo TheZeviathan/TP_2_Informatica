@@ -3,46 +3,157 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Bio - Artista</title>
-  <!-- Bootstrap CSS (CDN) -->
+  <title>Mike Mignola - Biografía</title>
+
+  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Roboto+Slab:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-  <header class="navbar-custom">
-    <div class="navbar-container">
-      <div class="brand">NOMBRE DEL ARTISTA</div>
+<body class="bg-dark text-light">
 
-      <ul class="nav-links" aria-label="Navegación principal">
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="bio.html">Biografía</a></li>
-        <li><a href="obras.html">Obras</a></li>
-        <li><a href="galeria.html">Galería</a></li>
-        <li><a href="eventos.html">Eventos</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-        <li><a href="proyecto.html">Proyecto</a></li>
-        <li><a href="subpagina1.html">Subpágina1</a></li>
-        <li><a href="subpagina2.html">Subpágina2</a></li>
-      </ul>
+  <!-- ====== NAVBAR ====== -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-black shadow-sm">
+    <div class="container">
+      <a class="navbar-brand text-danger d-flex align-items-center" href="index.html">
+        <img src="Img/Logo.png" alt="Logo" class="logo-img me-2">
+        <span>Mike Mignola</span>
+      </a>
 
-      <form class="search-box search-form" role="search">
-        <input type="search" name="q" placeholder="Buscar..." aria-label="Buscar">
-        <button type="submit" aria-label="Buscar">🔍</button>
-      </form>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navMain">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link active" href="bio.html">Biografía</a></li>
+          <li class="nav-item"><a class="nav-link" href="obras.html">Obras</a></li>
+          <li class="nav-item"><a class="nav-link" href="galeria.html">Galería</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
     </div>
-  </header>
+  </nav>
 
-  <main class="container-panel" role="main">
-    <h1>Bio</h1>
-    <p>Contenido temporal de la sección <strong>Bio</strong>. Reemplazar con texto e imágenes reales.</p>
+  <!-- ====== BIOGRAFÍA ====== -->
+  <main class="intro-section text-light" role="main">
+    <div class="container py-5">
+
+      <h1 class="section-title text-center mb-5">Biografía de Mike Mignola</h1>
+
+      <!-- ORÍGENES -->
+      <div class="row align-items-center g-4 mb-5">
+        <div class="col-md-5">
+          <img src="Img/retrato.jpg" alt="Retrato de Mike Mignola" class="img-fluid rounded shadow">
+        </div>
+        <div class="col-md-7">
+          <h3 class="text-danger mb-3">Orígenes y primeros años</h3>
+          <p>
+            <strong>Michael Joseph Mignola</strong> nació el <strong>16 de septiembre de 1960</strong> en Berkeley, California. 
+            Creció en la región del Área de la Bahía y desde pequeño sintió fascinación por los monstruos del cine clásico, los cuentos de terror gótico y la mitología antigua.
+            Un punto decisivo en su vida llegó cuando leyó <em>Drácula</em> de Bram Stoker durante la secundaria: fue entonces cuando decidió que quería dedicar su vida a crear historias llenas de misterio y oscuridad.
+          </p>
+          <p>
+            Aunque el cómic estadounidense de su época estaba dominado por superhéroes, Mignola se sintió atraído por el folclore, lo sobrenatural y el horror. 
+            Desde muy joven comenzó a dibujar criaturas fantásticas, construyendo sin saberlo la estética que lo distinguiría años más tarde.
+          </p>
+
+          <p>
+            Fue hasta 1980, cuando a sus 20 años de edad tuvo la oportunidad de trabajar como ilustrador en algunas publicaciones de la revista The Comic Reader, 
+            en ese momento Mignola todavía estudiaba en el Colegio de Artes de Califormia. 
+            La primera colaboración que hizo, fue en el #183 de dicha publicación con una ilustración de Red Sonja. 
+            Para el año 1981 tendría la oportunidad de dibujar la portada de la revista.
+          </p>
+
+        </div>
+      </div>
+
+      <!-- FORMACIÓN -->
+      <div class="row align-items-center g-4 mb-5">
+        <div class="col-md-6 order-md-2">
+          <img src="Img/California College of the Arts.jpg" alt="California College of the Arts" class="img-fluid rounded shadow">
+        </div>
+        <div class="col-md-6 order-md-1">
+          <h3 class="text-danger mb-3">Formación y primeros pasos</h3>
+          <p>
+            Mignola estudió ilustración en el <strong>California College of the Arts</strong>, donde perfeccionó su trazo y se interesó por el contraste entre luz y sombra. 
+            En 1981 publicó sus primeras ilustraciones en la revista <em>The Comic Reader</em>, y en 1983 comenzó a trabajar profesionalmente para <strong>Marvel Comics</strong> como entintador.
+          </p>
+          <p>
+            Durante sus primeros años colaboró en títulos como <em>Daredevil</em>, <em>Power Man & Iron Fist</em>, <em>The Incredible Hulk</em> y <em>Rocket Raccoon</em>.
+            Su estilo todavía estaba en formación, pero ya destacaba por su enfoque atmosférico y el uso expresivo del claroscuro.
+          </p>
+        </div>
+      </div>
+
+      <!-- ETAPA EN DC -->
+      <div class="row align-items-center g-4 mb-5">
+        <div class="col-md-5">
+          <img src="Img/Mike En DC.jpg" alt="Mike Mignola trabajando en DC Comics" class="img-fluid rounded shadow">
+        </div>
+        <div class="col-md-7">
+          <h3 class="text-danger mb-3">Trayectoria en DC y consolidación del estilo</h3>
+          <p>
+            A mediados de los años 80, Mignola comenzó a trabajar también para <strong>DC Comics</strong>. Allí su nombre se hizo más conocido gracias a proyectos como 
+            <em>Cosmic Odyssey</em> (junto a Jim Starlin) y <em>Batman: Gotham by Gaslight</em> (con John Byrne), esta última considerada una de las primeras historias del subgénero “Elseworlds”.
+          </p>
+          <p>
+            En esta etapa su estilo evolucionó hacia una estética más minimalista y expresionista, con figuras sólidas, grandes masas negras y composiciones que evocan el cine expresionista alemán.
+            Su arte comenzó a reconocerse por el uso magistral de la sombra y la omisión de detalles para sugerir más de lo que muestra.
+          </p>
+        </div>
+      </div>
+
+      <!-- MADUREZ -->
+      <div class="row align-items-center g-4 mb-5">
+        <div class="col-md-6 order-md-2">
+          <img src="Img/Mike studio.jpg" alt="Mike Mignola en su estudio" class="img-fluid rounded shadow">
+        </div>
+        <div class="col-md-6 order-md-1">
+          <h3 class="text-danger mb-3">Madurez artística y visión personal</h3>
+          <p>
+            A lo largo de su carrera, Mignola ha citado influencias como <strong>H.P. Lovecraft</strong>, <strong>Bram Stoker</strong>, el arte gótico y el cine de monstruos clásico. 
+            Aunque criado en un entorno católico, ha dicho que no se considera religioso, pero que los símbolos y temas de esa tradición impregnan su obra.
+          </p>
+          <p>
+            En los 90, consolidó su reputación como uno de los artistas más influyentes del cómic contemporáneo. 
+            Su estilo único combina mitología, horror cósmico, arte minimalista y narrativa visual potente. 
+            Colaboró también en la ilustración de novelas como <em>Baltimore, or the Steadfast Tin Soldier and the Vampire</em>, junto al escritor Christopher Golden.
+          </p>
+        </div>
+      </div>
+
+      <!-- VIDA PERSONAL -->
+      <div class="row align-items-center g-4 mb-5">
+        <div class="col-md-5">
+          <img src="Img/Familia.jpg" alt="Mike Mignola con su familia" class="img-fluid rounded shadow">
+        </div>
+        <div class="col-md-7">
+          <h3 class="text-danger mb-3">Vida personal y legado</h3>
+          <p>
+            Mike Mignola se casó con <strong>Christine Beatty</strong> en 1991, con quien tiene una hija. 
+            Vive en California, donde continúa desarrollando proyectos gráficos y colaboraciones.
+          </p>
+          <p>
+            Ha recibido numerosos premios, entre ellos varios <strong>Eisner Awards</strong> y <strong>Harvey Awards</strong>. 
+            A pesar del éxito de las adaptaciones cinematográficas y el reconocimiento mundial, prefiere mantenerse alejado del ritmo de Hollywood, 
+            dedicándose principalmente a la creación de nuevas historias ilustradas.
+          </p>
+          <p>
+            Su legado trasciende su obra: Mignola cambió la manera de entender la narrativa visual en el cómic moderno. 
+            Su nombre se asocia con atmósfera, simbolismo y un dominio absoluto de la oscuridad como lenguaje.
+          </p>
+        </div>
+      </div>
+    </div>
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <small>© 2025 - Sitio del Artista | Trabajo Práctico Informática General</small>
-    </div>
+  <!-- ====== FOOTER OPCIONAL ====== -->
+  <footer class="text-center text-secondary py-4 border-top border-secondary mt-5">
+    <small>&copy; 2025 Sitio Tributo a Mike Mignola | Diseño inspirado en su obra y legado.</small>
   </footer>
 
-<script src="js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
