@@ -1,48 +1,346 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Obras - Artista</title>
-  <!-- Bootstrap CSS (CDN) -->
+  <title>Obras - Mike Mignola</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Roboto+Slab:wght@400;600&display=swap" rel="stylesheet">
+  <link href="Css/style.css" rel="stylesheet">
 </head>
+
 <body>
-  <header class="navbar-custom">
-    <div class="navbar-container">
-      <div class="brand">NOMBRE DEL ARTISTA</div>
+  <!-- ===== NAVBAR ===== -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-black shadow-sm">
+  <div class="container">
+    <a class="navbar-brand text-danger d-flex align-items-center" href="index.html">
+      <img src="Img/Logo.png" alt="Logo" class="logo-img me-2">
+      <span>Mike Mignola</span>
+    </a>
 
-      <ul class="nav-links" aria-label="Navegación principal">
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="bio.html">Biografía</a></li>
-        <li><a href="obras.html">Obras</a></li>
-        <li><a href="galeria.html">Galería</a></li>
-        <li><a href="eventos.html">Eventos</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-        <li><a href="proyecto.html">Proyecto</a></li>
-        <li><a href="subpagina1.html">Subpágina1</a></li>
-        <li><a href="subpagina2.html">Subpágina2</a></li>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMain">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="bio.html">Biografía</a></li>
+        <li class="nav-item"><a class="nav-link active" href="obras.html">Obras</a></li>
+        <li class="nav-item"><a class="nav-link" href="galeria.html">Galería</a></li>
+        <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
       </ul>
-
-      <form class="search-box search-form" role="search">
-        <input type="search" name="q" placeholder="Buscar..." aria-label="Buscar">
-        <button type="submit" aria-label="Buscar">🔍</button>
-      </form>
     </div>
-  </header>
+  </div>
+</nav>
 
-  <main class="container-panel" role="main">
-    <h1>Obras</h1>
-    <p>Contenido temporal de la sección <strong>Obras</strong>. Reemplazar con texto e imágenes reales.</p>
-  </main>
 
-  <footer class="site-footer">
+  <!-- ===== SECCIÓN DE OBRAS ===== -->
+  <section class="obras-section py-5">
     <div class="container">
-      <small>© 2025 - Sitio del Artista | Trabajo Práctico Informática General</small>
+      <h2 class="section-title text-center mb-5">Obras de Mike Mignola</h2>
+
+      <div class="row g-4">
+
+        <!-- Hellboy -->
+        <div class="col-md-4">
+          <div class="card bg-dark text-light border-0 shadow obra-card obra-hellboy" data-bs-toggle="modal" data-bs-target="#modalHellboy">
+            <img src="Img/Hellboy/Hellboy 1 1.jpg" class="card-img-top obra-img" alt="Hellboy">
+            <div class="card-body">
+              <h5 class="card-title text-danger">Hellboy</h5>
+              <p class="card-text">El mítico demonio rojo con corazón humano, nacido para la destrucción pero destinado a proteger la Tierra.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- B.P.R.D. -->
+        <div class="col-md-4">
+          <div class="card bg-dark text-light border-0 shadow obra-card obra-bprd" data-bs-toggle="modal" data-bs-target="#modalBPRD">
+            <img src="Img/B.P.R.D/B.P.R.D 1.jpg" class="card-img-top obra-img" alt="B.P.R.D.">
+            <div class="card-body">
+              <h5 class="card-title text-primary">B.P.R.D.</h5>
+              <p class="card-text">El Buró de Investigación y Defensa Paranormal combate amenazas sobrenaturales globales.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Screw-On Head -->
+        <div class="col-md-4">
+          <div class="card bg-dark text-light border-0 shadow obra-card obra-screw" data-bs-toggle="modal" data-bs-target="#modalScrew">
+            <img src="Img/The Amazing Screw-On Head/Screw 1.jpg" class="card-img-top obra-img" alt="The Amazing Screw-On Head">
+            <div class="card-body">
+              <h5 class="card-title text-warning">The Amazing Screw-On Head</h5>
+              <p class="card-text">Una sátira de espionaje victoriano con humor negro y estética mecánica inconfundible.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Baltimore -->
+        <div class="col-md-4">
+          <div class="card bg-dark text-light border-0 shadow obra-card obra-baltimore" data-bs-toggle="modal" data-bs-target="#modalBaltimore">
+            <img src="Img/Baltimore/Baltimore 1.jfif" class="card-img-top obra-img" alt="Baltimore">
+            <div class="card-body">
+              <h5 class="card-title text-purple">Baltimore</h5>
+              <p class="card-text">Una historia gótica sobre la venganza de un soldado en un mundo asolado por vampiros.</p>
+            </div>
+          </div>
+        </div>
+
+          <!-- Witchfinder -->
+          <div class="col-md-4">
+            <div class="card bg-dark text-light border-0 shadow obra-card obra-witchfinder" data-bs-toggle="modal" data-bs-target="#modalWitchfinder">
+              <img src="Img/Witchfinder/Witchfinder 1.jpg" class="card-img-top obra-img" alt="Witchfinder">
+              <div class="card-body">
+                <h5 class="card-title text-success">Witchfinder</h5>
+                <p class="card-text">Las aventuras de Sir Edward Grey, cazador de brujas en la Inglaterra victoriana, enfrentando lo oculto y lo macabro.</p>
+              </div>
+            </div>
+          </div>
+
+
+        <!-- Ilustraciones -->
+        <div class="col-md-4">
+          <div class="card bg-dark text-light border-0 shadow obra-card obra-misc" data-bs-toggle="modal" data-bs-target="#modalMisc">
+            <img src="Img/Cossobers/cross 1.jpg" class="card-img-top obra-img" alt="Ilustraciones y colaboraciones">
+            <div class="card-body">
+              <h5 class="card-title text-warning">Ilustraciones y colaboraciones</h5>
+              <p class="card-text">Obras independientes, portadas y colaboraciones con otros artistas del cómic y cine.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
+  </section>
+
+  <!-- ===== MODALES ===== -->
+
+  <!-- Hellboy -->
+  <div class="modal fade modal-hellboy" id="modalHellboy" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-danger">Hellboy</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div id="hellboyCarousel" class="carousel slide obra-carousel" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active"><img src="Img/Hellboy/Hellboy 1 1.jpg" class="d-block" alt="Hellboy 2 1"></div>
+              <div class="carousel-item"><img src="Img/Hellboy/Hellboy 2 1.jpg" class="d-block" alt="Hellboy 3 1"></div>
+              <div class="carousel-item"><img src="Img/Hellboy/Hellboy 3 1.jpg" class="d-block" alt="Hellboy 4 1"></div>
+              <div class="carousel-item"><img src="Img/Hellboy/Hellboy 4 1.jpg" class="d-block" alt="Hellboy 5 1"></div>
+            <div class="carousel-item"><img src="Img/Hellboy/Hellboy 5 1.jpg" class="d-block" alt="Hellboy 5 1"></div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#hellboyCarousel" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
+            <button class="carousel-control-next" type="button" data-bs-target="#hellboyCarousel" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
+          </div>
+          <p class="mt-3">“Hellboy” (1994) combina mitología, ocultismo y humor negro, explorando el destino de un demonio que elige la humanidad.</p>
+          <p><strong>Hellboy</strong> es la obra más emblemática de Mike Mignola y una piedra angular del cómic moderno. Nacido en 1994 bajo el sello Dark Horse Comics, el personaje es un demonio invocado por ocultistas nazis durante la Segunda Guerra Mundial, pero rescatado por el Profesor Trevor Bruttenholm y criado como un héroe en el Bureau for Paranormal Research and Defense. Su piel roja, su brazo de piedra y sus cuernos limados son tanto símbolos de su naturaleza infernal como de su deseo de pertenecer al mundo humano.</p>
+          <p>Visualmente, Mignola construye el universo de Hellboy a partir de una estética gótica y minimalista. Los escenarios están definidos por el contraste brutal entre luces y sombras, con estructuras arquitectónicas que evocan ruinas europeas, castillos decadentes y catacumbas antiguas. El uso del color, limitado y preciso, refuerza el tono sombrío y melancólico del relato. Cada viñeta se siente como una pintura detenida en el tiempo, cargada de silencio y simbolismo.</p>
+          <p>En lo narrativo, “Hellboy” combina mitología, folclore, horror lovecraftiano y humor seco. Cada historia es una reinterpretación moderna de mitos antiguos —desde el Ragnarok nórdico hasta leyendas eslavas—, donde la monstruosidad se convierte en un reflejo de la humanidad. Hellboy, criatura nacida para traer el fin del mundo, elige resistir su destino, convirtiéndose en metáfora del libre albedrío frente a la fatalidad.</p>
+          <p>A lo largo de los años, la serie expandió su universo en sagas como <em>Seed of Destruction</em>, <em>The Wild Hunt</em> y <em>Hellboy in Hell</em>, donde el héroe desciende literalmente al inframundo. La madurez emocional de la obra culmina en esta última etapa, cuando Hellboy acepta su muerte, no como condena, sino como liberación.</p>
+          <p>El legado de “Hellboy” trascendió el cómic: inspiró adaptaciones cinematográficas dirigidas por Guillermo del Toro, novelas gráficas, figuras y un universo extendido de historias. Su impacto reside en haber devuelto al cómic de horror una voz autoral y poética, donde el monstruo no es enemigo, sino espejo del alma humana.</p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BPRD -->
+  <div class="modal fade modal-bprd" id="modalBPRD" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-primary">B.P.R.D.</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div id="bprdCarousel" class="carousel slide obra-carousel" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active"><img src="Img/B.P.R.D/B.P.R.D 1.jpg" class="d-block w-100"></div>
+              <div class="carousel-item"><img src="Img/B.P.R.D/B.P.R.D 2.jpg" class="d-block w-100"></div>
+              <div class="carousel-item"><img src="Img/B.P.R.D/B.P.R.D 3.jpg" class="d-block w-100"></div>
+              <div class="carousel-item"><img src="Img/B.P.R.D/B.P.R.D 4.jpg" class="d-block w-100"></div>
+              <div class="carousel-item"><img src="Img/B.P.R.D/B.P.R.D 5.jpg" class="d-block w-100" ></div>
+
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#bprdCarousel" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
+            <button class="carousel-control-next" type="button" data-bs-target="#bprdCarousel" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
+          </div>
+          <p class="mt-3">El “Bureau for Paranormal Research and Defense” amplía el universo Hellboy con historias corales de horror y ciencia.</p>
+        <p><strong>B.P.R.D.</strong> nació como una expansión natural del universo Hellboy, permitiendo a Mignola explorar la mitología que había creado desde una perspectiva más coral. Lanzada en 2002, la serie sigue las operaciones del Buró de Investigación y Defensa Paranormal, una organización global que enfrenta fenómenos sobrenaturales, plagas demoníacas y civilizaciones perdidas.</p>
+
+        <p>Con guiones de John Arcudi y arte de Guy Davis, la saga combina el horror cósmico con el drama humano. Personajes como Abe Sapien, Liz Sherman y Johann Kraus representan diferentes facetas de la alienación: seres humanos o inhumanos que buscan propósito en un mundo en ruinas. Mignola utiliza este relato para examinar la decadencia de la civilización moderna frente a fuerzas primordiales que la ciencia no puede explicar.</p>
+
+        <p>Visualmente, B.P.R.D. se aleja del minimalismo solitario de Hellboy y adopta una composición más caótica y orgánica. Las líneas se vuelven menos rígidas, el trazo más gestual y la paleta de colores más fría, reflejando la descomposición del mundo. La narrativa introduce un tono bélico, casi apocalíptico, en el que los héroes combaten lo inevitable.</p>
+
+        <p>Más allá del horror, la serie se distingue por su ambición filosófica: plantea que el fin del mundo no es una catástrofe, sino una transformación. A medida que los humanos desaparecen, surgen nuevas especies y realidades. Es la fusión del mito y la ciencia, la teología y la biología, en un mismo universo coherente y vasto.</p>
+
+        <p>“B.P.R.D.” consolidó a Mignola como arquitecto de una cosmología completa, un “Mignolaverse” que, como el de Lovecraft, trasciende personajes y épocas para explorar lo eterno y lo desconocido.</p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Screw-On Head -->
+  <div class="modal fade modal-screw" id="modalScrew" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-warning">The Amazing Screw-On Head</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div id="screwCarousel" class="carousel slide obra-carousel" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active"><img src="Img/The Amazing Screw-On Head/Screw 1.jpg" class="d-block w-100"></div>
+              <div class="carousel-item"><img src="Img/The Amazing Screw-On Head/Screw 2.jpg" class="d-block w-100"></div>
+              <div class="carousel-item"><img src="Img/The Amazing Screw-On Head/Screw 3.jpg" class="d-block w-100"></div>
+              <div class="carousel-item"><img src="Img/The Amazing Screw-On Head/Screw 4.jpg" class="d-block w-100"></div>
+              <div class="carousel-item"><img src="Img/The Amazing Screw-On Head/Screw 5.jpg" class="d-block w-100"></div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#screwCarousel" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
+            <button class="carousel-control-next" type="button" data-bs-target="#screwCarousel" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
+          </div>
+          <p class="mt-3">Una sátira de espionaje paranormal donde un agente con cabeza desmontable combate amenazas sobrenaturales con humor negro.</p>
+          <p><strong>The Amazing Screw-On Head</strong> (2002) es una joya breve y excéntrica dentro de la obra de Mignola. Creada como un homenaje a los cuentos pulp y la sátira victoriana, la historia presenta a un agente mecánico del gobierno estadounidense del siglo XIX que combate amenazas sobrenaturales al servicio de Abraham Lincoln. Su cabeza desmontable y cuerpo intercambiable son tanto una broma absurda como una metáfora de la deshumanización tecnológica.</p>
+
+          <p>En esta obra, Mignola combina lo grotesco con lo elegante, fusionando el steampunk con el horror gótico. Cada página está plagada de ironía, simetrías y artefactos imposibles. El resultado es un relato de espionaje absurdo, lleno de momias, vampiros y villanos teatrales, donde el autor ridiculiza los tropos del género sin perder su amor por ellos.</p>
+
+          <p>La adaptación animada de 2006, producida por Sci-Fi Channel, llevó fielmente al movimiento el estilo visual de Mignola. Fue aclamada por su fidelidad estética: las sombras planas, los colores saturados y el humor seco se tradujeron directamente a la pantalla, convirtiéndose en obra de culto.</p>
+
+          <p>Más allá de su tono humorístico, la historia es también una reflexión sobre el absurdo del deber heroico y la soledad del protagonista. En la aparente ridiculez de Screw-On Head, Mignola explora la relación entre identidad, cuerpo y propósito.</p>
+
+          <p>El cómic, aunque breve, se ha convertido en ejemplo de cómo la originalidad puede coexistir con el homenaje. Es la muestra más pura del ingenio y libertad creativa del autor.</p>
+        
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Baltimore -->
+  <div class="modal fade modal-baltimore" id="modalBaltimore" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-purple">Baltimore</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div id="baltimoreCarousel" class="carousel slide obra-carousel" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active"><img src="Img/Baltimore/Baltimore 1.jfif" class="d-block w-100"></div>
+              <div class="carousel-item"><img src="Img/Baltimore/Baltimore 2.jpg" class="d-block w-100"></div>
+              <div class="carousel-item"><img src="Img/Baltimore/Baltimore 3.jpg" class="d-block w-100"></div>
+              <div class="carousel-item"><img src="Img/Baltimore/Baltimore 4.jpg" class="d-block w-100"></div>     
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#baltimoreCarousel" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
+            <button class="carousel-control-next" type="button" data-bs-target="#baltimoreCarousel" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
+          </div>
+          <p class="mt-3">“Baltimore” mezcla horror y tragedia, siguiendo a un soldado que busca venganza en una Europa devastada por vampiros.</p>
+        
+        <p><strong>Baltimore</strong>, creado por Mike Mignola y Christopher Golden, representa una evolución más literaria y trágica dentro del Mignolaverse. Publicado originalmente como novela ilustrada en 2007 y luego adaptado a cómic, narra la cruzada de Lord Henry Baltimore, un soldado que tras sobrevivir a la Primera Guerra Mundial se enfrenta a un mundo infestado de vampiros.</p>
+
+        <p>El relato utiliza la figura del vampiro no como monstruo romántico, sino como símbolo de la peste moral y espiritual. La guerra ha abierto un abismo en el alma humana, y de ese vacío surgen las criaturas que devoran lo que queda de esperanza. Mignola y Golden construyen un universo de horror gótico clásico, heredero de Bram Stoker, Mary Shelley y Joseph Conrad.</p>
+
+        <p>La composición visual mantiene la estética de Mignola —líneas pesadas, sombras densas, arquitectura en ruinas—, pero con un enfoque más épico y literario. Cada viñeta transmite la melancolía de un mundo que ha perdido su fe. Los colores, terrosos y apagados, evocan la pintura simbolista del siglo XIX.</p>
+
+        <p>Baltimore no es sólo una historia de venganza: es una elegía sobre la pérdida y el sacrificio. El protagonista, mutilado y atormentado, se convierte en el último vestigio de un ideal caballeresco en un mundo devorado por la oscuridad. En su viaje, la esperanza es tan peligrosa como el mal al que combate.</p>
+
+        <p>En conjunto, “Baltimore” amplía la poética de Mignola hacia lo trágico y lo humano. Es una obra donde la fe y el horror coexisten, y donde el verdadero enemigo no son los monstruos, sino el olvido.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<!-- Witchfinder -->
+<div class="modal fade modal-witchfinder" id="modalWitchfinder" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-success">Witchfinder</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <div id="witchfinderCarousel" class="carousel slide obra-carousel" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active"><img src="Img/Witchfinder/Witchfinder 1.jpg" class="d-block w-100" alt="Witchfinder 1"></div>
+            <div class="carousel-item"><img src="Img/Witchfinder/Witchfinder 2.jpg" class="d-block w-100" alt="Witchfinder 2"></div>
+            <div class="carousel-item"><img src="Img/Witchfinder/Witchfinder 3.jpg" class="d-block w-100" alt="Witchfinder 3"></div>
+            <div class="carousel-item"><img src="Img/Witchfinder/Witchfinder 4.jpg" class="d-block w-100" alt="Witchfinder 3"></div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#witchfinderCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#witchfinderCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </button>
+        </div>
+        <p class="mt-3">“Witchfinder” sigue a Sir Edward Grey, un investigador de lo sobrenatural en la Inglaterra victoriana. Mezcla horror, ocultismo y aventura, explorando brujería y conspiraciones oscuras.</p>
+      
+      <p><strong>Witchfinder</strong> profundiza en los cimientos del universo de Hellboy al situarse en la Inglaterra victoriana. El protagonista, Sir Edward Grey, es un investigador de lo oculto al servicio de la Corona, enfrentando brujas, demonios y conspiraciones secretas en los albores de la modernidad.</p>
+
+      <p>La serie explora el nacimiento de la ciencia y la razón en una época aún dominada por el miedo y la superstición. Grey representa la tensión entre la racionalidad ilustrada y el mundo invisible que Mignola siempre ha habitado: un espacio donde lo inexplicable persiste más allá de la lógica.</p>
+
+      <p>En lo visual, “Witchfinder” retoma la estética de grabado decimonónico y los tonos terrosos de los museos antiguos. Las composiciones son más amplias, las figuras más realistas, pero el uso del negro sigue siendo protagonista. Es la época de la lámpara de gas, del polvo y del humo, y Mignola logra convertir ese ambiente en un personaje más.</p>
+
+      <p>Más que una simple precuela, “Witchfinder” ofrece una genealogía del miedo. Es la arqueología espiritual del universo Hellboy: una mirada al pasado donde se gestaron los demonios del presente.</p>
+
+      <p>Con esta obra, Mignola consolida su rol como narrador histórico del horror, capaz de vincular la literatura victoriana, el ocultismo y el cómic contemporáneo en un mismo lenguaje visual.</p>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <!-- Misc -->
+  <div class="modal fade modal-misc" id="modalMisc" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-warning">Ilustraciones y colaboraciones</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div id="miscCarousel" class="carousel slide obra-carousel" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active"><img src="Img/Cossobers/cross 1.jpg" class="d-block w-100"></div>
+              <div class="carousel-item"><img src="Img/Cossobers/cross 2.jpg" class="d-block w-100"></div>
+              <div class="carousel-item"><img src="Img/Cossobers/cross 3.jpg" class="d-block w-100"></div>
+              <div class="carousel-item"><img src="Img/Cossobers/cross 4.jpg" class="d-block w-100"></div>
+              <div class="carousel-item"><img src="Img/Cossobers/cross 5.jpg" class="d-block w-100"></div>
+            
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#miscCarousel" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
+            <button class="carousel-control-next" type="button" data-bs-target="#miscCarousel" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
+          
+          </div>
+          <p class="mt-3">Ilustraciones independientes, colaboraciones con Guillermo del Toro y portadas icónicas para editoriales de cómic y cine.</p>
+        
+        <p>Además de su universo narrativo, <strong>Mike Mignola</strong> ha desarrollado una obra paralela como ilustrador y diseñador conceptual. Su trazo, caracterizado por sombras duras y economía de línea, se ha convertido en un lenguaje visual en sí mismo. Cada imagen parece tallada en piedra, cargada de misterio y resonancia mitológica.</p>
+
+        <p>Ha colaborado en producciones cinematográficas como <em>Bram Stoker’s Dracula</em> (1992), <em>Atlantis: The Lost Empire</em> (2001), <em>Blade II</em> (2002) y las películas de <em>Hellboy</em> de Guillermo del Toro, aportando diseño de personajes, arquitectura y criaturas. Su visión combina lo grotesco y lo sagrado, lo funcional y lo simbólico.</p>
+
+        <p>En el ámbito editorial, Mignola ha ilustrado portadas para colecciones de Lovecraft, Poe y libros de arte fantástico. Su obra pictórica refleja una obsesión constante por la muerte, los dioses antiguos y los héroes caídos, pero también por la belleza en la descomposición.</p>
+
+        <p>Estas ilustraciones, muchas veces independientes del cómic, son estudios de forma y silencio. En ellas, la figura humana se disuelve entre ruinas y símbolos arcanos. Son el testimonio de un artista que entiende el horror no como grito, sino como eco.</p>
+
+        <p>En conjunto, su obra visual fuera del cómic consolida a Mignola como un artista total, heredero del simbolismo europeo y del expresionismo alemán, capaz de crear mundos enteros a partir de una sola sombra.</p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- ====== FOOTER ====== -->
+  <footer class="text-center text-secondary py-4 border-top border-secondary mt-5">
+    <small>&copy; 2025 Sitio Tributo a Mike Mignola | Diseño inspirado en su obra y legado.</small>
   </footer>
 
-<script src="js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

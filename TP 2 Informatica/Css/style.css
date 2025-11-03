@@ -324,3 +324,112 @@ h5 {
   background-color: #c4a661;
   color: #494949;
 }
+
+/* === RECORTE IMÁGENES CARRUSEL === */
+/* Ajuste avanzado para recorte centrado de carruseles */
+.obra-carousel img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  
+}
+
+
+    body {
+      background-color: #000;
+      color: #eee;
+      font-family: 'Roboto Slab', serif;
+    }
+
+    .section-title {
+      font-family: 'Cinzel', serif;
+      color: #fff;
+    }
+
+    /* ==== Tarjetas de obras ==== */
+    .obra-card {
+      border-radius: 8px;
+      overflow: hidden;
+      transition: transform .2s ease, box-shadow .2s ease;
+      cursor: pointer;
+    }
+
+      .obra-img {
+      height: 350px;          /* Ajustá este valor si querés más alto/bajo */
+      object-fit: cover;      /* Esto recorta pero mantiene proporción */
+      object-position: center;
+      width: 100%;
+    }
+
+
+          .obra-card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 20px rgba(255, 0, 0, .4);
+    }
+
+    .obra-card:hover .obra-img {
+      filter: brightness(1.1);
+    }
+
+    @media (max-width: 768px) {
+  .obra-img {
+    height: 260px;
+  }
+}
+
+    /* Colores de brillo por obra */
+    .obra-hellboy:hover { box-shadow: 0 0 30px 5px #d21f1f; }
+    .obra-bprd:hover { box-shadow: 0 0 30px 5px #3b82f6; }
+    .obra-screw:hover { box-shadow: 0 0 30px 5px #f59e0b; }
+    .obra-baltimore:hover { box-shadow: 0 0 30px 5px #a855f7; }
+    .obra-crooked:hover { box-shadow: 0 0 30px 5px #22c55e; }
+    .obra-misc:hover { box-shadow: 0 0 30px 5px #eab308; }
+
+    /* ==== Modales ==== */
+    .modal-content {
+      border: 2px solid transparent;
+      border-radius: 10px;
+      background-color: #111;
+      color: #ddd;
+      transition: border 0.3s ease;
+    }
+
+    .modal-body img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+    .modal-hellboy .modal-content { border-color: #d21f1f; box-shadow: 0 0 25px #d21f1f66; }
+    .modal-bprd .modal-content { border-color: #3b82f6; box-shadow: 0 0 25px #3b82f666; }
+    .modal-screw .modal-content { border-color: #f59e0b; box-shadow: 0 0 25px #f59e0b66; }
+    .modal-baltimore .modal-content { border-color: #a855f7; box-shadow: 0 0 25px #a855f766; }
+    .modal-crooked .modal-content { border-color: #22c55e; box-shadow: 0 0 25px #22c55e66; }
+    .modal-misc .modal-content { border-color: #eab308; box-shadow: 0 0 25px #eab30866; }
+
+    .modal-header {
+      border-bottom: 1px solid #333;
+    }
+
+    .obra-carousel img {
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+.carousel-item img {
+  max-height: 500px; /* Ajusta este valor según el tamaño que quieras */
+  width: auto;        /* Mantiene la proporción original */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: contain; /* Se asegura de que la imagen no se deforme */
+}
+
+
+    footer {
+      background-color: #111;
+      color: #777;
+      padding: 20px 0;
+      margin-top: 50px;
+    }
