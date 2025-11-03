@@ -12,9 +12,8 @@
 <!-- ====== NAVBAR ====== -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-black shadow-sm">
   <div class="container">
-    <!-- LOGO + NOMBRE -->
     <a class="navbar-brand text-danger d-flex align-items-center" href="index.html">
-      <img src="assets/img/logo.png" alt="Logo" class="logo-img me-2">
+      <img src="Img/Logo.png" alt="Logo" class="logo-img me-2">
       <span>Mike Mignola</span>
     </a>
 
@@ -22,7 +21,6 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <!-- MENÚ -->
     <div class="collapse navbar-collapse" id="navMain">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
@@ -52,24 +50,78 @@
 <section class="intro-section">
   <div class="container text-center">
     <h2 class="section-title">Un arte nacido de la oscuridad</h2>
-    <p class="lead">La estética única de Mignola redefine el cómic moderno: siluetas, claroscuros y mitología lovecraftiana cobran vida en sus viñetas.</p>
+    <p class="lead">
+      La estética única de Mignola redefine el cómic moderno: siluetas, claroscuros y mitología lovecraftiana 
+      cobran vida en sus viñetas. Cada trazo evoca misterio y melancolía, un equilibrio entre la belleza y lo 
+      monstruoso que se ha convertido en su sello inconfundible.
+    </p>
   </div>
 </section>
 
-<!-- ====== HIGHLIGHT ====== -->
-<section class="highlight-section">
+<!-- ====== HIGHLIGHT HELLBOY ====== -->
+<section class="highlight-section hellboy-section">
   <div class="container">
     <div class="row align-items-center g-4">
       <div class="col-md-6">
-        <img src="assets/img/art1.jpg" alt="Hellboy Artwork" class="img-fluid rounded shadow">
+        <img src="Img/hellboy.png" alt="Hellboy Artwork" class="img-fluid rounded shadow">
       </div>
       <div class="col-md-6 text-light">
         <h3 class="mb-3 text-danger">Hellboy: un héroe entre mundos</h3>
-        <p>Desde su creación en 1994, Hellboy se convirtió en ícono del cómic contemporáneo, combinando humor seco, misticismo y melancolía.</p>
+        <p>
+          <strong>Hellboy</strong> fue creado por Mike Mignola y apareció por primera vez en 1993. 
+          Su historia de origen se remonta a la Segunda Guerra Mundial, cuando el infante demonio 
+          fue invocado por ocultistas nazis, solo para ser rescatado y criado por el Profesor Trevor Bruttenholm.
+        </p>
+        <p>
+          A lo largo de las décadas, Hellboy se ha enfrentado a brujas, dioses antiguos y criaturas que habitan 
+          los márgenes del mito y la locura. Su narrativa está impregnada de folclore europeo, horror cósmico 
+          y humor sutil, mostrando el conflicto entre la naturaleza demoníaca y la humanidad que lo define.
+        </p>
+        <p>
+          El universo de Hellboy se expandió con títulos como <em>B.P.R.D.</em>, <em>Abe Sapien</em> y <em>Lobster Johnson</em>, 
+          construyendo un vasto cosmos narrativo. Todo esto plasmado con el trazo característico de Mignola: 
+          sombras duras, geometría expresiva y un uso dramático del silencio visual.
+        </p>
       </div>
     </div>
   </div>
 </section>
+
+<!-- ====== SHADER HELLBOY ====== -->
+<div class="red-shader" id="hellboyShader"></div>
+
+<!-- ====== HIGHLIGHT MIKE ====== -->
+<section class="highlight-section mike-section">
+  <div class="container">
+    <div class="row align-items-center g-4">
+      <div class="col-md-6 order-md-2">
+        <img src="Img/Mike_Mignola.jpg" alt="Mike Mignola Retrato" class="img-fluid rounded shadow">
+      </div>
+      <div class="col-md-6 text-light order-md-1">
+        <h3 class="mb-3 text-danger">Mike Mignola y su forma de crear arte</h3>
+        <p>
+          <strong>Mike Mignola</strong> nació en 1960 en Berkeley, California. Desde joven se sintió atraído por 
+          las historias de monstruos, los mitos antiguos y las películas de terror de los años 30 y 40. 
+          Su carrera comenzó en DC Comics, donde colaboró en títulos como <em>Batman: Gotham by Gaslight</em>, 
+          una reinterpretación gótica del Caballero Oscuro.
+        </p>
+        <p>
+          Sin embargo, fue con <strong>Hellboy</strong> donde Mignola consolidó su visión artística: un universo 
+          donde el horror se mezcla con la mitología y el humor irónico. Su estilo, marcado por el uso del 
+          claroscuro y la simplificación de las formas, convierte cada página en una composición casi escultórica.
+        </p>
+        <p>
+          A lo largo de su carrera, Mignola ha colaborado con artistas y cineastas —como Guillermo del Toro— 
+          que comparten su fascinación por lo monstruoso y lo divino. Más allá del cómic, su legado es una 
+          celebración de la imperfección y de la belleza que habita en la sombra.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== SHADER MIKE ====== -->
+<div class="gray-shader" id="mikeShader"></div>
 
 <!-- ====== QUOTE ====== -->
 <section class="quote-section text-center text-light">
@@ -88,6 +140,34 @@
     <p>Basado en la obra de Mike Mignola</p>
   </div>
 </footer>
+
+<!-- ====== SHADER SCRIPT ====== -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const shaders = [
+    { id: "hellboyShader", section: ".hellboy-section" },
+    { id: "mikeShader", section: ".mike-section" }
+  ];
+
+  shaders.forEach(({ id, section }) => {
+    const shader = document.getElementById(id);
+    const target = document.querySelector(section);
+    if (!shader || !target) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) shader.classList.add("active");
+          else shader.classList.remove("active");
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    observer.observe(target);
+  });
+});
+</script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="js/shared.js"></script>

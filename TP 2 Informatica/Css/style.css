@@ -114,12 +114,112 @@ h5 {
   text-decoration: none;
 }
 
+/* ========== SHADER EFECTO HELLBOY - LÍNEAS ROJAS ========== */
+.red-shader {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+  z-index: 999;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.red-shader::before,
+.red-shader::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 7px;
+  background: linear-gradient(
+    to bottom,
+    rgba(165, 0, 0, 0.26),
+    rgba(255, 31, 31, 0.9),
+    rgba(31, 0, 0, 0.432)
+  );
+  opacity: 0.9;
+  animation: hellfire-glow 1.8s ease-in-out infinite alternate;
+}
+
+.red-shader::before { left: 0; }
+.red-shader::after { right: 0; }
+
+.red-shader.active {
+  opacity: 1;
+}
+
+@keyframes hellfire-glow {
+  from {
+    box-shadow: 0 0 8px rgba(255, 50, 50, 0.4);
+    filter: brightness(0.9);
+  }
+  to {
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.7);
+    filter: brightness(1.3);
+  }
+}
+/* ========== FIN SHADER HELLBOY ========== */
+
+/* ========== SHADER EFECTO MIKE - LÍNEAS GRISES ========== */
+.gray-shader {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+  z-index: 998;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.gray-shader::before,
+.gray-shader::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 7px;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.7),
+    rgba(180, 180, 180, 0.9),
+    rgba(0, 0, 0, 0.7)
+  );
+  box-shadow: 0 0 8px rgba(200, 200, 200, 0.3);
+  opacity: 0.8;
+  animation: mike-glow 2s ease-in-out infinite alternate;
+}
+
+.gray-shader::before { left: 0; }
+.gray-shader::after { right: 0; }
+
+.gray-shader.active {
+  opacity: 1;
+}
+
+@keyframes mike-glow {
+  from {
+    box-shadow: 0 0 6px rgba(180, 180, 180, 0.2);
+    filter: brightness(0.9);
+  }
+  to {
+    box-shadow: 0 0 15px rgba(230, 230, 230, 0.5);
+    filter: brightness(1.2);
+  }
+}
+/* ========== FIN SHADER MIKE ========== */
+
+
+
 .logo-img {
-  height: 40px;
-  width: 40px;
+  height: 50px;
+  width: 50px;
   border-radius: 50%;
   object-fit: cover;
-  filter: brightness(0) invert(1);
 }
 
 /* Menú alineado a la derecha */
@@ -172,7 +272,7 @@ h5 {
 /* ===== SECTION STYLES ===== */
 
 .section-title {
-  color: #b11226;
+  color: rgb(177, 18, 38);
   margin-bottom: 1rem;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -188,11 +288,22 @@ h5 {
   padding: 4rem 0;
 }
 
+.highlight-section strong {
+  color: rgb(177, 18, 38);
+  font-weight: 700;
+}
+
+.highlight-section img {
+  transition: all 0.4s ease;
+  filter: drop-shadow(0 0 8px rgba(177, 18, 38, 0.5));
+}
+
 .quote-section {
   background-color: #111;
   padding: 3rem 0;
   font-style: italic;
 }
+
 
 /* ===== FOOTER ===== */
 
@@ -211,5 +322,5 @@ h5 {
 
 .btn-outline-light:hover {
   background-color: #c4a661;
-  color: #0d0d0d;
+  color: #494949;
 }
