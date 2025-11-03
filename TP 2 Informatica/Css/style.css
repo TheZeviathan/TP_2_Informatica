@@ -8,32 +8,60 @@ body {
 
 /* ===== HERO ANIMATION ===== */
 
-.hero h1, .hero p {
+.hero h1,
+.hero p {
   opacity: 0;
   transform: translateY(20px);
-  animation: fadeInUp 2s ease forwards; /* transición más fluida */
+  animation: fadeInUp 2s ease forwards;
 }
 
 .hero .mignola-name {
-  display: block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   color: #b11226;
   font-size: 3.5rem;
   margin-top: 0.3rem;
   letter-spacing: 2px;
+  gap: 1rem;
+}
+
+/* Imagen junto al título */
+.hero .mignola-name img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
 }
 
 .hero p {
   font-size: 1.25rem;
   color: #e0e0e0;
-  animation-delay: 1s; /* aparece 2 segundos después del título */
+  animation-delay: 1s;
 }
 
-/* Animación: transición más lenta pero aparición rápida */
+/* Botón con aparición en fundido */
+.hero-btn {
+  opacity: 0;
+  animation: fadeInSmooth 1.5s ease forwards;
+  animation-delay: 3s;
+}
+
+/* Animaciones */
 @keyframes fadeInUp {
   0% {
     opacity: 0;
+    transform: translateY(20px);
   }
-  25% {
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInSmooth {
+  0% {
     opacity: 0;
   }
   100% {
@@ -43,32 +71,77 @@ body {
 
 /* ===== HEADERS ===== */
 
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
   font-family: 'Cinzel', serif;
   letter-spacing: 1px;
 }
 
 /* ===== NAVIGATION ===== */
 
-.navbar-brand {
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-
+/* Forzar ancho completo y eliminar márgenes laterales del container */
 .navbar {
   border-bottom: 2px solid #b11226;
+  background-color: #000;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar > .container {
+  max-width: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Mantener el logo + texto alineado a la izquierda */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-family: 'Cinzel', serif;
+  color: #b11226 !important;
+  text-decoration: none;
+}
+
+.logo-img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  filter: brightness(0) invert(1);
+}
+
+/* Menú alineado a la derecha */
+.navbar-nav {
+  margin-left: auto;
+  align-items: center;
+  display: flex;
+  gap: 0.4rem;
 }
 
 .nav-link {
   text-transform: uppercase;
   font-weight: 500;
   color: #e0e0e0 !important;
-  transition: 0.3s;
+  transition: color 0.25s ease;
+  padding: 0.5rem 0.75rem;
 }
 
-.nav-link:hover, .nav-link.active-link {
+.nav-link:hover,
+.nav-link.active {
   color: #b11226 !important;
+  text-decoration: none;
 }
 
 /* ===== HERO SECTION ===== */
