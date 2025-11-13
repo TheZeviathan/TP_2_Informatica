@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Exposiciones - Mike Mignola</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Roboto+Slab:wght@400;600&display=swap" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body class="bg-black text-light">
+
+<!-- ====== NAVBAR ====== -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-black shadow-sm">
+  <div class="container">
+    <a class="navbar-brand text-danger d-flex align-items-center" href="index.html">
+      <img src="img/logo.png" alt="Logo" class="logo-img me-2">
+      <span>Mike Mignola</span>
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMain">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="bio.html">Biografía</a></li>
+        <li class="nav-item"><a class="nav-link" href="obras.html">Obras</a></li>
+        <li class="nav-item"><a class="nav-link" href="galeria.html">Galería</a></li>
+        <li class="nav-item"><a class="nav-link active" href="exposiciones.html">Exposiciones</a></li>
+        <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+        <li class="nav-item"><a class="nav-link" href="creditos.html">Créditos</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<!-- ====== HEADER ====== -->
+<header class="py-5 text-center border-bottom border-secondary">
+  <div class="container">
+    <h1 class="display-4 text-danger" style="font-family: 'Cinzel', serif;">Exposiciones Internacionales</h1>
+    <p class="text-secondary mt-3" style="font-family: 'Roboto Slab', serif;">
+      Un recorrido por las muestras alrededor del mundo dedicadas al arte oscuro, simbólico y único de Mike Mignola.
+    </p>
+  </div>
+</header>
+
+
+<!-- ====== MAPA ====== -->
+<section class="mapa-section py-5 bg-dark border-top border-bottom border-secondary">
+  <div class="container">
+    <h2 class="section-title text-center mb-4" style="font-family: 'Cinzel', serif;">Mapa de Exposiciones</h2>
+
+    <div class="ratio ratio-16x9 shadow-lg border border-secondary">
+      <!-- Puedes cambiar por un mapa propio o dejar esta referencia -->
+      <iframe 
+        src="https://www.google.com/maps/d/embed?mid=1C6xG7FBFNh3nF3x3mwqwrfHzO8fHj6A&hl=es"
+        style="border:0;" allowfullscreen="" loading="lazy">
+      </iframe>
+    </div>
+
+    <p class="text-center text-secondary small mt-2">
+      Ubicaciones aproximadas de museos, galerías y muestras dedicadas a la obra de Mignola.
+    </p>
+  </div>
+</section>
+
+
+<!-- ====== TARJETAS DE EXPOSICIONES ====== -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-5" style="font-family: 'Cinzel', serif;">Próximas y Pasadas Exhibiciones</h2>
+
+    <div class="row g-4">
+
+      <!-- Expo 1 -->
+      <div class="col-md-4">
+        <div class="card bg-dark text-light border-0 shadow-lg h-100">
+          <img src="img/expo/london.jpg" class="card-img-top" alt="Londres">
+          <div class="card-body">
+            <h5 class="card-title text-danger">“Sombras del Inframundo” – Londres</h5>
+            <p class="text-secondary mb-1"><strong>Ubicación:</strong> Tate Modern</p>
+            <p class="text-secondary mb-1"><strong>Fecha:</strong> 12 Mayo – 20 Agosto 2025</p>
+            <p class="card-text mt-2">
+              Una exhibición que explora la influencia del gótico europeo en la obra de Mignola, con piezas inéditas y bocetos originales.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Expo 2 -->
+      <div class="col-md-4">
+        <div class="card bg-dark text-light border-0 shadow-lg h-100">
+          <img src="img/expo/tokyo.jpg" class="card-img-top" alt="Tokyo">
+          <div class="card-body">
+            <h5 class="card-title text-warning">“Demonios y Tinta” – Tokio</h5>
+            <p class="text-secondary mb-1"><strong>Ubicación:</strong> Mori Art Museum</p>
+            <p class="text-secondary mb-1"><strong>Fecha:</strong> 3 Octubre – 15 Diciembre 2025</p>
+            <p class="card-text mt-2">
+              Una muestra inmersiva con proyecciones, animaciones y esculturas basadas en Hellboy y su universo.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Expo 3 -->
+      <div class="col-md-4">
+        <div class="card bg-dark text-light border-0 shadow-lg h-100">
+          <img src="img/expo/newyork.jpg" class="card-img-top" alt="New York">
+          <div class="card-body">
+            <h5 class="card-title text-primary">“El Mignolaverso” – Nueva York</h5>
+            <p class="text-secondary mb-1"><strong>Ubicación:</strong> MoMA</p>
+            <p class="text-secondary mb-1"><strong>Fecha:</strong> 2024–2025 (Exposición Permanente)</p>
+            <p class="card-text mt-2">
+              Una retrospectiva completa del estilo visual de Mignola, desde sus inicios hasta sus colaboraciones cinematográficas.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ====== FOOTER ====== -->
+<footer class="text-center text-secondary py-4 border-top border-secondary mt-5">
+  <small>&copy; 2025 Sitio Tributo a Mike Mignola | Diseño inspirado en su obra y legado.</small>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,10 +1,4 @@
-/* Mignola tribute theme */
 
-body {
-  font-family: 'Roboto Slab', serif;
-  background-color: #0d0d0d;
-  color: #e0e0e0;
-}
 
 /* ===== HERO ANIMATION ===== */
 
@@ -338,11 +332,7 @@ h5 {
 /* Estilos específicos para la página de contacto */
 .logo-img { height: 44px; width: 44px; object-fit: cover; border-radius: 6px; }
 
-#contactForm .form-label { font-weight: 600; color: #f3f3f3; }
-#contactForm .form-control { background: #121212; border-color: #333; color: #eee; }
-#contactForm .form-control:focus { box-shadow: 0 0 0 0.15rem rgba(177,18,38,0.18); border-color: #b11226; }
-
-.card { background: #0d0d0d; border-color: #222; }
+.card { background: #0d0d0d; border-color: #ffffff; }
 .btn-danger { background-color: #b11226; border-color: #b11226; }
 .btn-danger:hover { background-color: #8f0e20; border-color: #8f0e20; }
 
@@ -444,6 +434,102 @@ h5 {
   margin-left: auto;
   margin-right: auto;
   object-fit: contain; /* Se asegura de que la imagen no se deforme */
+}
+
+/* ==== REESTILIZACIÓN TOTAL DE LA PÁGINA DE CONTACTO ==== */
+/* Esta sección fuerza el mismo esquema visual que el sitio Biografía */
+
+body.contacto-page,
+body#contacto,
+body[data-page="contacto"] {
+  background-color: #121212 !important; /* Fondo oscuro como el resto del sitio */
+  color: #f8f9fa !important; /* Texto claro */
+  font-family: 'Roboto Slab', serif !important;
+}
+
+/* Formularios y textos */
+#contactForm,
+form.contact-form {
+  background: transparent !important;
+  color: #f8f9fa !important;
+  border: none !important;
+}
+
+/* Asegurar blanco en textos que Bootstrap deja gris */
+body.contacto-page .text-muted,
+body.contacto-page .form-text,
+body.contacto-page .form-label,
+body.contacto-page p,
+body.contacto-page h1,
+body.contacto-page h2,
+body.contacto-page h3,
+body.contacto-page h4,
+body.contacto-page h5,
+body.contacto-page h6 {
+  color: #fff !important;
+}
+
+
+#contactForm .form-control,
+form.contact-form .form-control {
+  background-color: #1a1a1a !important;
+  border: 1px solid #333 !important;
+  color: #f8f9fa !important;
+}
+
+#contactForm .form-control:focus,
+form.contact-form .form-control:focus {
+  border-color: #b11226 !important;
+  box-shadow: 0 0 0 0.25rem rgba(177,18,38,0.3) !important;
+}
+
+/* Botones */
+#contactForm button,
+form.contact-form button,
+.btn-contacto {
+  background-color: #b11226 !important;
+  color: #fff !important;
+  border: none !important;
+  transition: background-color 0.3s ease;
+}
+
+#contactForm button:hover,
+form.contact-form button:hover,
+.btn-contacto:hover {
+  background-color: #d41c3b !important;
+}
+
+
+/* Tarjetas o contenedores */
+.card, .contact-card {
+  background-color: #000 !important;
+  color: #f8f9fa !important;
+  border: 1px solid #333 !important;
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.4) !important;
+}
+
+/* Links */
+a {
+  color: #dc3545 !important;
+  text-decoration: none !important;
+}
+a:hover {
+  color: #ff4b5c !important;
+}
+
+/* Footer coherente */
+footer {
+  background: #000 !important;
+  color: #aaa !important;
+  border-top: 1px solid #333 !important;
+}
+
+/* Centrado de botones o secciones específicas */
+.text-center .btn,
+#contactForm .btn,
+form.contact-form .btn {
+  display: inline-block;
+  margin: 1rem auto !important;
 }
 
 
