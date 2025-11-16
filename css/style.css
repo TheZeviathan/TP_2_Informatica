@@ -547,6 +547,25 @@ form.contact-form .btn {
   margin: 1rem auto !important;
 }
 
+.glow-green {
+  animation: greenGlow 0.6s ease-out;
+}
+
+.glow-red {
+  animation: redGlow 0.6s ease-out;
+}
+
+@keyframes greenGlow {
+  0% { box-shadow: 0 0 0px #00ff88; }
+  100% { box-shadow: 0 0 18px #00ff88; }
+}
+
+@keyframes redGlow {
+  0% { box-shadow: 0 0 0px #ff4444; }
+  100% { box-shadow: 0 0 18px #ff4444; }
+}
+
+
 
     footer {
       background-color: #111;
