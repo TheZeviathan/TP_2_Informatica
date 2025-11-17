@@ -142,3 +142,4 @@ restartBtn.onclick = () => {
 
 /* Iniciar trivia */
 loadQuestion();
+
